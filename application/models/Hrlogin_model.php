@@ -22,11 +22,11 @@ class Hrlogin_model extends CI_Model{
             $result = array();
             if ($user_password == $user_data->user_password) {
                 if ($user_data->user_status == 0) {
-                    $result['valid'] = false;
+                    $result['validation'] = false;
                     //$result['error'] = 'Your account is suspended! Please contact to Administrator!';
                     $this->session->set_flashdata('account_suspend','message');
                 } else {
-                    $result['valid'] = true;
+                    $result['validation'] = true;
                     $result['iduser'] = $user_data->iduser;
                     $result['user_name'] = $user_data->user_name;
                     $result['user_email'] = $user_data->user_email;
@@ -34,14 +34,14 @@ class Hrlogin_model extends CI_Model{
                     $this->session->set_flashdata('success_login','message');
                 }
             } else {
-                $result['valid'] = false;
+                $result['validation'] = false;
                 //$result['error'] = 'Invalid Password!';
                 $this->session->set_flashdata('invalid_password','message');
             }
 
             return $result;
         } else {
-            $result['valid'] = false;            
+            $result['validation'] = false;            
             //$result['error'] = 'Email Address do not exist at the system!';
             $this->session->set_flashdata('invalid_email','message');
 

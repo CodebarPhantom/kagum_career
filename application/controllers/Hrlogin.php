@@ -27,7 +27,7 @@ class Hrlogin extends CI_Controller{
       );
           $result = $this->Hrlogin_model->verifyLogIn($data);
 
-          if ($result['valid']) {
+          if ($result['validation']) {
               $iduser = $result['iduser'];
               $user_email = $result['user_email'];
               $user_name = $result['user_name'];
@@ -45,8 +45,8 @@ class Hrlogin extends CI_Controller{
 
               redirect(base_url().'hradmin', 'refresh');
           } else {
-              $this->session->set_flashdata('alert_msg', array('failure', 'Login', $result['error']));
-              redirect(base_url());
+              $this->session->set_flashdata('alert_msg', array('failure', 'Login', $result['validation']));
+              redirect(base_url('hrlogin'), 'refresh');
           }
       
   

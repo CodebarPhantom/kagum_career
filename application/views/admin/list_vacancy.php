@@ -20,7 +20,7 @@
 					<div class="col-md-10">
 					<div class="form-group row">
 						<div class="col-lg-3">
-						<a href="<?=base_url()?>hradmin/add_vacancy" class="btn bg-teal-400 btn-labeled btn-labeled-left"><b><i class="icon-medal2"></i></b> <?php echo $lang_add_vacancy; ?></a>
+						<a href="<?=base_url()?>hradmin/add-vacancy" class="btn bg-teal-400 btn-labeled btn-labeled-left"><b><i class="icon-medal2"></i></b> <?php echo $lang_add_vacancy; ?></a>
 						</div>
 						
 						<div class="col-lg-7">
@@ -30,12 +30,12 @@
 										<i class="icon-search4"></i>
 									</span>
 								</span>
-								<form action="<?php echo site_url('hradmin/list_vacancy'); ?>" class="form-inline" method="get">
+								<form action="<?php echo site_url('hradmin/list-vacancy'); ?>" class="form-inline" method="get">
 									<input type="text" class="form-control border-left-0"  name="q" value="<?php echo $q; ?>" placeholder="<?php echo $lang_search_vacancy; ?>">
 									<span class="input-group-append">									
 										<button class="btn btn-light" type="submit"> <?php echo $lang_search; ?></button>
 										<?php if ($q <> ''){?>
-											<a href="<?php echo site_url('hradmin/list_vacancy'); ?>" class="btn btn-light">Reset</a>
+											<a href="<?php echo site_url('hradmin/list-vacancy'); ?>" class="btn btn-light">Reset</a>
 										<?php } ?>
 									</span>
 								</form>
@@ -89,7 +89,7 @@
 
 											<div class="dropdown-menu dropdown-menu-right">
 											
-												<a href="<?=base_url('hradmin/update_vacancy/').$career_vacancy->idcareer; ?>" class="dropdown-item"><i class="icon-pencil"></i><?php echo $lang_edit_vacancy; ?></a>
+												<a href="<?=base_url('hradmin/update-vacancy/').$career_vacancy->idcareer; ?>" class="dropdown-item"><i class="icon-pencil"></i><?php echo $lang_edit_vacancy; ?></a>
 												
 											</div>
 										</div>

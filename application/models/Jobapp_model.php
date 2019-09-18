@@ -14,7 +14,7 @@ class Jobapp_model extends CI_Model
  
     function total_rows_vacancy(/*$joblist = NULL*/) { 
         $today = date("Y-m-d"); 
-        $this->db->select('v.idcareer, j.position_name, c.city_name, h.hotels_name, v.publishdate, v.expiredate, v.date_created v.status');      
+        $this->db->select('v.idcareer, j.position_name, c.city_name, h.hotels_name, v.publishdate, v.expiredate, v.date_created, v.status');      
        // $this->db->like('j.position_name', $joblist);
        // $this->db->or_like('c.city_name', $joblist); 
         //$this->db->or_like('h.hotels_name', $joblist);     
@@ -90,6 +90,20 @@ class Jobapp_model extends CI_Model
 		return $count_vacancy->result();
     }
     
+    function getid_vacancy($idcareer)
+    {
+        $today = date("Y-m-d"); 
+        $this->db->select('v.idcareer, j.position_name, v.requirement, c.city_name, h.hotels_name, v.publishdate, v.expiredate, v.date_created, v.status');            
+        $this->db->from('career_vacancy as v');
+        $this->db->join('career_jobtitle as j', 'v.idjobtitle = j.idjobtitle', 'left');
+        $this->db->join('career_city as c', 'v.idcity = c.idcity', 'left');
+        $this->db->join('career_hotels as h', 'v.idhotels = h.idhotels', 'left');
+        $this->db->where('v.idcareer', $idcareer);
+        $this->db->where('v.status', 'active');
+        $this->db->where('v.publishdate <= "'.$today.'"');
+        $this->db->where('v.expiredate >= "'.$today.'"');
+        return $this->db->get()->result();
+    }
     
 
 }

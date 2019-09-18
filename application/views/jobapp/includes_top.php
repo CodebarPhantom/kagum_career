@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/magnific-popup.css" type="text/css" />
+	<!-- Date & Time Picker CSS -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/components/datepicker.css" type="text/css" />
+	
 
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -66,11 +66,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-users?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/list-users?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_users?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_users?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-users';
-            $config['first_url'] = base_url() . 'hradmin/list-users';
+            $config['base_url'] = base_url() . 'hradmin/list_users';
+            $config['first_url'] = base_url() . 'hradmin/list_users';
         }
 
         $config['per_page'] = 10;
@@ -163,7 +163,7 @@ class Hradmin extends CI_Controller{
         $this->Career_users_model->insertData( 'career_users',$data);
         $this->session->set_flashdata('input_success','message');
         
-        redirect(site_url('hradmin/list-users'));
+        redirect(site_url('hradmin/list_users'));
         }else{
         redirect('errorpage/error403');
     }
@@ -183,7 +183,7 @@ class Hradmin extends CI_Controller{
      
         $this->Career_users_model->updateDataUser('career_users', $data, $this->input->post('iduser', TRUE));
         $this->session->set_flashdata('update_success','message');
-        redirect(site_url('hradmin/list-users'));
+        redirect(site_url('hradmin/list_users'));
       }else{
         redirect('errorpage/error403');
     }
@@ -194,7 +194,7 @@ class Hradmin extends CI_Controller{
     if($user_level === '1'){
           $this->Career_users_model->deleteDataUser($iduser);
           $this->session->set_flashdata('delete_success','message');
-          redirect(site_url('hradmin/list-users'));
+          redirect(site_url('hradmin/list_users'));
         }else{
           redirect('errorpage/error403');
       }
@@ -212,13 +212,13 @@ class Hradmin extends CI_Controller{
      
         if (empty($newpass)) {
             $this->session->set_flashdata('update_password_failure','message');
-            redirect(base_url().'hradmin/list-users');
+            redirect(base_url().'hradmin/list_users');
         } elseif (empty($conpass)) {
           $this->session->set_flashdata('update_password_failure','message');
-            redirect(base_url().'hradmin/list-users');
+            redirect(base_url().'hradmin/list_users');
         } elseif ($newpass != $conpass) {
            $this->session->set_flashdata('update_password_notsame','message');
-            redirect(base_url().'hradmin/list-users');
+            redirect(base_url().'hradmin/list_users');
         } else {
             $upd_data = array(
               'user_password' => SHA1($this->input->post('newpassword', TRUE)),
@@ -227,7 +227,7 @@ class Hradmin extends CI_Controller{
             );
             if ($this->Career_users_model->updatePasswordData('career_users', $upd_data, $iduser)) {
                 $this->session->set_flashdata('update_success','message');
-                redirect(base_url().'hradmin/list-users');
+                redirect(base_url().'hradmin/list_users');
             }
         }
       }else{
@@ -242,11 +242,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-city?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/list-city?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_city?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_city?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-city';
-            $config['first_url'] = base_url() . 'hradmin/list-city';
+            $config['base_url'] = base_url() . 'hradmin/list_city';
+            $config['first_url'] = base_url() . 'hradmin/list_city';
         }
 
         $config['per_page'] = 10;
@@ -324,7 +324,7 @@ class Hradmin extends CI_Controller{
       );  
         $this->Career_city_model->insertData('career_city',$data);
         $this->session->set_flashdata('input_success','message');        
-        redirect(site_url('hradmin/list-city'));
+        redirect(site_url('hradmin/list_city'));
         }else{
         redirect('errorpage/error403');
     }
@@ -340,7 +340,7 @@ class Hradmin extends CI_Controller{
      
         $this->Career_users_model->updateDataCity('career_city', $data, $this->input->post('idcity', TRUE));
         $this->session->set_flashdata('update_success','message');
-        redirect(site_url('hradmin/list-city'));
+        redirect(site_url('hradmin/list_city'));
       }else{
         redirect('errorpage/error403');
     }
@@ -352,7 +352,7 @@ class Hradmin extends CI_Controller{
     if($user_level === '1' || $user_level === '2' || $user_level === '3'){  
     $this->Career_city_model->deleteDataCity($idcity);
     $this->session->set_flashdata('delete_success','message');
-    redirect(site_url('hradmin/list-city'));
+    redirect(site_url('hradmin/list_city'));
     }else{
       redirect('errorpage/error403');
     }
@@ -367,11 +367,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-hotel?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/listhotel?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_hotel?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_hotel?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-hotel';
-            $config['first_url'] = base_url() . 'hradmin/list-hotel';
+            $config['base_url'] = base_url() . 'hradmin/list_hotel';
+            $config['first_url'] = base_url() . 'hradmin/list_hotel';
         }
 
         $config['per_page'] = 10;
@@ -452,7 +452,7 @@ class Hradmin extends CI_Controller{
       );  
         $this->Career_city_model->insertData('career_hotels',$data);
         $this->session->set_flashdata('input_success','message');        
-        redirect(site_url('hradmin/list-hotel'));
+        redirect(site_url('hradmin/list_hotel'));
         }else{
         redirect('errorpage/error403');
     }      
@@ -468,7 +468,7 @@ class Hradmin extends CI_Controller{
      
         $this->Career_hotels_model->updateDataHotels('career_hotels', $data, $this->input->post('idhotels_old', TRUE));
         $this->session->set_flashdata('update_success','message');
-        redirect(site_url('hradmin/list-hotel'));
+        redirect(site_url('hradmin/list_hotel'));
       }else{
         redirect('errorpage/error403');
     }
@@ -480,7 +480,7 @@ class Hradmin extends CI_Controller{
     if($user_level === '1' || $user_level === '2' || $user_level === '3'){  
     $this->Career_hotels_model->deleteDataHotels($idhotels);
     $this->session->set_flashdata('delete_success','message');
-    redirect(site_url('hradmin/list-hotel'));
+    redirect(site_url('hradmin/list_hotel'));
     }else{
       redirect('errorpage/error403');
     }
@@ -494,11 +494,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-jobtitle?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/list-jobtitle?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_jobtitle?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_jobtitle?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-jobtitle';
-            $config['first_url'] = base_url() . 'hradmin/list-jobtitle';
+            $config['base_url'] = base_url() . 'hradmin/list_jobtitle';
+            $config['first_url'] = base_url() . 'hradmin/list_jobtitle';
         }
 
         $config['per_page'] = 10;
@@ -579,7 +579,7 @@ class Hradmin extends CI_Controller{
       );  
         $this->Career_jobtitle_model->insertData('career_jobtitle',$data);
         $this->session->set_flashdata('input_success','message');        
-        redirect(site_url('hradmin/list-jobtitle'));
+        redirect(site_url('hradmin/list_jobtitle'));
         }else{
         redirect('errorpage/error403');
     }      
@@ -596,7 +596,7 @@ class Hradmin extends CI_Controller{
         $this->Career_jobtitle_model->updateDataJobtitle('career_jobtitle', $data, $this->input->post('idjobtitle', TRUE));
         $this->session->set_flashdata('update_success','message');
         //$_SERVER['HTTP_REFERER'];
-        redirect(site_url('hradmin/list-jobtitle'));
+        redirect(site_url('hradmin/list_jobtitle'));
       }else{
         redirect('errorpage/error403');
     }
@@ -608,7 +608,7 @@ class Hradmin extends CI_Controller{
     if($user_level === '1' || $user_level === '2' || $user_level === '3'){  
     $this->Career_jobtitle_model->deleteDataJobtitle($idjobtitle);
     $this->session->set_flashdata('delete_success','message');
-    redirect(site_url('hradmin/list-jobtitle'));
+    redirect(site_url('hradmin/list_jobtitle'));
     }else{
       redirect('errorpage/error403');
     }
@@ -622,11 +622,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-departement?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/list-departement?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_departement?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_departement?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-departement';
-            $config['first_url'] = base_url() . 'hradmin/list-departement';
+            $config['base_url'] = base_url() . 'hradmin/list_departement';
+            $config['first_url'] = base_url() . 'hradmin/list_departement';
         }
 
         $config['per_page'] = 10;
@@ -708,7 +708,7 @@ class Hradmin extends CI_Controller{
       );  
         $this->Career_jobtitle_model->insertData('career_dept',$data);
         $this->session->set_flashdata('input_success','message');        
-        redirect(site_url('hradmin/list-departement'));
+        redirect(site_url('hradmin/list_departement'));
         }else{
         redirect('errorpage/error403');
     }      
@@ -725,7 +725,7 @@ class Hradmin extends CI_Controller{
         $this->Career_departement_model->updateDataDepartement('career_dept', $data, $this->input->post('iddept_old', TRUE));
         $this->session->set_flashdata('update_success','message');
         
-        redirect(site_url('hradmin/list-departement'));
+        redirect(site_url('hradmin/list_departement'));
       }else{
         redirect('errorpage/error403');
     }
@@ -737,7 +737,7 @@ class Hradmin extends CI_Controller{
     if($user_level === '1' || $user_level === '2' || $user_level === '3'){  
     $this->Career_departement_model->deleteDataDepartement($iddept);
     $this->session->set_flashdata('delete_success','message');
-    redirect(site_url('hradmin/list-departement'));
+    redirect(site_url('hradmin/list_departement'));
     }else{
       redirect('errorpage/error403');
     }
@@ -751,11 +751,11 @@ class Hradmin extends CI_Controller{
         $start = intval($this->input->get('start'));
         
         if ($q <> '') {
-            $config['base_url'] = base_url() . 'hradmin/list-vacancy?q=' . urlencode($q);
-            $config['first_url'] = base_url() . 'hradmin/list-vacancy?q=' . urlencode($q);
+            $config['base_url'] = base_url() . 'hradmin/list_vacancy?q=' . urlencode($q);
+            $config['first_url'] = base_url() . 'hradmin/list_vacancy?q=' . urlencode($q);
         } else {
-            $config['base_url'] = base_url() . 'hradmin/list-vacancy';
-            $config['first_url'] = base_url() . 'hradmin/list-vacancy';
+            $config['base_url'] = base_url() . 'hradmin/list_vacancy';
+            $config['first_url'] = base_url() . 'hradmin/list_vacancy';
         }
 
         $config['per_page'] = 10;
@@ -913,7 +913,7 @@ class Hradmin extends CI_Controller{
         );  
         $this->Career_vacancy_model->insertData('career_vacancy',$data);
         $this->session->set_flashdata('input_success','message');        
-        redirect(site_url('hradmin/list-vacancy'));
+        redirect(site_url('hradmin/list_vacancy'));
         }else{
         redirect('errorpage/error403');
     }  
@@ -994,6 +994,7 @@ class Hradmin extends CI_Controller{
       $publish = strtotime($this->input->post('publishdate'));
       $expire = strtotime($this->input->post('expiredate'));
       $data = array( 
+          'idcareer' => uniqid(),
           'idjobtitle' => $this->input->post('idjobtitle',TRUE),
           'idcity' => $this->input->post('idcity',TRUE),
           'idhotels' => $this->input->post('idhotels',TRUE),
@@ -1006,7 +1007,7 @@ class Hradmin extends CI_Controller{
         $this->Career_vacancy_model->updateDataVacancy('career_vacancy', $data, $this->input->post('idcareer', TRUE));
         $this->session->set_flashdata('update_success','message');
         
-        redirect(site_url('hradmin/list-vacancy'));
+        redirect(site_url('hradmin/list_vacancy'));
       }else{
         redirect('errorpage/error403');
     }

@@ -49,8 +49,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     $lang['list_departement'] = 'List Departement';
     $lang['add_departement'] = 'Add Departement';
     $lang['edit_departement'] = 'Edit Departement';
-    $lang['delete_departement'] = 'Delete Departement';
-    
+    $lang['delete_departement'] = 'Delete Departement';    
 
     
     $lang['hotel'] = 'Hotels';
@@ -68,6 +67,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     $lang['list_vacancy'] = 'List Vacancy';
     $lang['publish_date'] = 'Publish Date';
     $lang['expire_date'] = 'Expire Date';
+    $lang['expired_date'] = 'Expired Date';
     $lang['requirement'] = 'Requirement';
 
     $lang['job_title'] = 'Job Title';
@@ -106,5 +106,56 @@ defined('BASEPATH') or exit('No direct script access allowed');
     $lang['choose_city'] = 'Choose City';
     $lang['choose_hotels'] = 'Choose Hotels';
     $lang['choose_position_name'] = 'Choose Position Name';
+
+    $lang['browse_job'] = 'Browse Job';
+    $lang['placement'] = 'Placement';
+    $lang['apply_now'] = 'Apply Now';
+    $lang['next'] = 'Next';
+    $lang['previous'] = 'Previous';
+
+    $lang['applicant_profile'] = 'Applicant Profile';
+    $lang['education_experience'] = 'Education and Experience';
+    $lang['idatt_file'] = 'ID and Attach File';
+    $lang['complete'] = 'Complete';
+    $lang['firstname'] = 'Firstname';
+    $lang['lastname'] = 'Lastname';
+    $lang['birthplace'] = 'Birthplace';
+    $lang['dob'] = 'Date of Birth';
+    $lang['gender'] = 'Gender';
+    $lang['male'] = 'Male';
+    $lang['female'] = 'Female';
+    $lang['address'] = 'Address';
+    $lang['height'] = 'Height';
+    $lang['body_weight'] = 'Body Weight';
+    $lang['phone'] = 'phone';
+    $lang['mobile_phone'] = 'Mobile Phone';
+    $lang['citizenship'] = 'Citizenship';
+    $lang['religion'] = 'Religion';
+    $lang['tribe'] = 'Tribe';
+    $lang['family_status'] = 'Marital Status';
+    $lang['education'] = 'Education';
+    $lang['experience'] = 'Experience';
+    $lang['education_name'] = 'Education Name';
+    $lang['from'] = 'From';
+    $lang['to'] = 'To';
+    $lang['major'] = "Major";
+    $lang['degree'] = 'Degree';
+    $lang['add_education'] = 'Add More Education';
+    $lang['add_experience'] = 'Add More Experience';
+    $lang['reset_row'] = 'Reset Row';
+
+    $lang['company_name'] = 'Company Name';
+    $lang['industry'] = 'Industry';
     
+    $lang['position'] = 'Position';
+    $lang['join_date'] = 'Join Date';
+    $lang['end_date'] = 'End Date';
+    $lang['supervisor_name'] = 'Supervisor Name';
+    $lang['salary'] = 'Salary';
+    $lang['reason_leaving'] = 'Reason of Leaving';
+
+
+
+
+
 

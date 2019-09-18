@@ -64,16 +64,16 @@
 							<table class="table">
 								<thead>
 								  <tr>									
-									<th>Position Name</th>
-									<th>Placement</th>
-									<th>Hotels</th>
-									<th>Expired Date</th>								
+									<th><?php echo $lang_position_name; ?></th>
+									<th><?php echo $lang_city; ?></th>
+									<th><?php echo $lang_hotels; ?></th>
+									<th><?php echo $lang_expired_date; ?></th>								
 								  </tr>
 								</thead>
 								<tbody>
 								<?php foreach ($jobapp_vacancy_data as $jobapp_vacancy){?>
 								  <tr>									
-									<td><?php echo $jobapp_vacancy->position_name; ?></td>
+									<td><a href="<?php echo base_url('jobapp/job-requirement/').$jobapp_vacancy->idcareer;?>/";><?php echo $jobapp_vacancy->position_name; ?></a></td>
 									<td><?php echo $jobapp_vacancy->city_name; ?></td>
 									<td><?php echo $jobapp_vacancy->hotels_name; ?></td>
 									<td><?php $expiredate =  $jobapp_vacancy->expiredate;
@@ -113,7 +113,7 @@
 					<div class="sidebar nobottommargin clearfix">
 						<div class="sidebar-widgets-wrap">
 						<div class="widget widget_links clearfix">	
-							<h4>Browse Job</h4>
+							<h4><?php echo $lang_browse_job; ?></h4>
                             <div class="list-group list-group-mine">
 							<?php foreach ($dept_vacancy as $row_dep){ 
 								$total = 0;

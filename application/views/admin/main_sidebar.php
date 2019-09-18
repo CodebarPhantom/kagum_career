@@ -97,7 +97,7 @@ $tk_m = $this->router->method;
             <li class="nav-item nav-item-submenu <?php if ($tk_m == 'list_city' ) { ?><?php echo 'nav-item-open'; } else { echo '';} ?>">
                 <a href="#" class="nav-link"><i class="icon-city"></i> <span><?php echo $lang_city; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts" <?php if ($tk_m == 'list_city') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list_city" class="nav-link <?php if ($tk_m == 'list_city') { ?>  <?php echo 'active'; } ?>" ><?php echo $lang_list_city; ?></a></li>                                      
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list-city" class="nav-link <?php if ($tk_m == 'list_city') { ?>  <?php echo 'active'; } ?>" ><?php echo $lang_list_city; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>
@@ -106,7 +106,7 @@ $tk_m = $this->router->method;
             <li class="nav-item nav-item-submenu <?php if ($tk_m == 'list_departement' ) { ?><?php echo 'nav-item-open'; } else { echo '';} ?>">
                 <a href="#" class="nav-link"><i class="icon-tree6"></i> <span><?php echo $lang_departement; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts" <?php if ($tk_m == 'list_departement') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list_departement" class="nav-link <?php if ($tk_m == 'list_departement') { ?>  <?php echo 'active'; } ?>" ><?php echo $lang_list_departement; ?></a></li>                                      
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list-departement" class="nav-link <?php if ($tk_m == 'list_departement') { ?>  <?php echo 'active'; } ?>" ><?php echo $lang_list_departement; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>
@@ -115,7 +115,7 @@ $tk_m = $this->router->method;
             <li class="nav-item nav-item-submenu <?php if ($tk_m == 'list_hotel' ) { ?><?php echo 'nav-item-open'; } else { echo '';} ?>">
                 <a href="#" class="nav-link"><i class="icon-office"></i> <span><?php echo $lang_hotel; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts" <?php if ($tk_m == 'list_hotel') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list_hotel" class="nav-link <?php if ($tk_m == 'list_hotel') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_hotels; ?></a></li>                                      
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list-hotel" class="nav-link <?php if ($tk_m == 'list_hotel') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_hotels; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>
@@ -124,7 +124,7 @@ $tk_m = $this->router->method;
             <li class="nav-item nav-item-submenu <?php if ($tk_m == 'list_jobtitle' ) { ?><?php echo 'nav-item-open'; } else { echo '';} ?>">
                 <a href="#" class="nav-link"><i class="icon-medal2"></i> <span><?php echo $lang_job_title; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts" <?php if ($tk_m == 'list_jobtitle') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
-                   <li class="nav-item"><a href="<?=base_url()?>hradmin/list_jobtitle" class="nav-link <?php if ($tk_m == 'list_jobtitle') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_job_titles; ?></a></li>                                      
+                   <li class="nav-item"><a href="<?=base_url()?>hradmin/list-jobtitle" class="nav-link <?php if ($tk_m == 'list_jobtitle') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_job_titles; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>
@@ -134,7 +134,7 @@ $tk_m = $this->router->method;
                 <a href="#" class="nav-link"><i class="icon-users2"></i> <span><?php echo $lang_user; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts" <?php if ($tk_m == 'list_users') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
                     <!--<li class="nav-item"><a href="<?//=base_url()?>admin/add_user" class="nav-link <?php //if ($tk_m == 'add_user') { ?>  <?php //echo 'active'; } ?>"><?php //echo $lang_add_user; ?></a></li> --> 
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list_users" class="nav-link <?php if ($tk_m == 'list_users') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_users; ?></a></li>                                      
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list-users" class="nav-link <?php if ($tk_m == 'list_users') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_users; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>
@@ -143,8 +143,8 @@ $tk_m = $this->router->method;
             <li class="nav-item nav-item-submenu <?php if ($tk_m == 'list_vacancy' || $tk_m == 'add_vacancy' || $tk_m == 'update_vacancy') { ?><?php echo 'nav-item-open'; } else { echo '';} ?>">
                 <a href="#" class="nav-link"><i class="icon-magazine"></i> <span><?php echo $lang_vacancy; ?></span></a>
                 <ul class="nav nav-group-sub" data-submenu-title="Layouts"  <?php if ($tk_m == 'list_vacancy' || $tk_m == 'add_vacancy' || $tk_m == 'update_vacancy') { ?>  <?php echo 'style="display: block;"'; } else { echo 'style="display: none;"';} ?>>
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/add_vacancy" class="nav-link <?php if ($tk_m == 'add_vacancy') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_add_vacancy; ?></a></li>  
-                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list_vacancy" class="nav-link <?php if ($tk_m == 'list_vacancy' || $tk_m == 'update_vacancy')  { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_vacancy; ?></a></li>                                      
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/add-vacancy" class="nav-link <?php if ($tk_m == 'add_vacancy') { ?>  <?php echo 'active'; } ?>"><?php echo $lang_add_vacancy; ?></a></li>  
+                    <li class="nav-item"><a href="<?=base_url()?>hradmin/list-vacancy" class="nav-link <?php if ($tk_m == 'list_vacancy' || $tk_m == 'update_vacancy')  { ?>  <?php echo 'active'; } ?>"><?php echo $lang_list_vacancy; ?></a></li>                                      
                 </ul>
             </li>
             <?php } ?>

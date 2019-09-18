@@ -154,12 +154,10 @@
                                                 <p>Kagum Hotels is the rapidly developing hotel management company based in Bandung that currently manages a diverse array of quality hotels spread in many major city in 
                                                     Indonesia such as Bandung, bali, Surabaya, Yogyakarta, Bogor, Klaten and Jakarta. We always set our eyes to become the leader of hospitality industry in Indonesia as we 
                                                     continue to develop and expand our business in the future.</p>
-
                                                 <p>If you&rsquo;re talented,this position might be for you.</p>
 
-                                                <p><b>The Individuals concerned must process the following qualifications:</b></p>
-
-                                                <ul>
+                                                <p class="nobottommargin"><b>The Individuals concerned must process the following qualifications:</b></p>
+                                                <ul class="iconlist nobottommargin">
                                                     <li>Has previously worked in similar position</li>
                                                     <li>Has a strong desire to be the best,enthusiastic and energic</li>
                                                     <li>Fluency in English both spoke &amp; written</li>
@@ -167,7 +165,6 @@
                                                     <li>Career development oriented</li>
                                                     <li>Excellent interpersonal skill and a team player</li>
                                                 </ul>
-
                                             </textarea>
 										</div>
                                     </div>
@@ -191,7 +188,7 @@
 
 								<div class="card-footer bg-teal-400 border-top-0">
 									<div class="d-flex justify-content-between align-items-center">
-										<a href="<?php echo base_url('hradmin/list_vacancy');?>" class="btn btn-outline bg-danger text-white border-white border-2 cancel"  role="button">Cancel</a>
+										<a href="<?php echo base_url('hradmin/list-vacancy');?>" class="btn btn-outline bg-danger text-white border-white border-2 cancel"  role="button">Cancel</a>
 										<button type="submit" class="btn btn-outline bg-success text-white border-white border-2"><?php echo $lang_submit; ?> <i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</div>

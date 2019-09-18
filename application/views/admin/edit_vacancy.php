@@ -180,7 +180,7 @@
 								<div class="card-footer bg-teal-400 border-top-0">
 									<div class="d-flex justify-content-between align-items-center">
                                         <input type="hidden" name="idcareer" class="form-control" value="<?=$update_vacancy->idcareer;?>" required>
-										<a href="<?php echo base_url('hradmin/list_vacancy');?>" class="btn btn-outline bg-danger text-white border-white border-2 cancel"  role="button">Cancel</a>
+										<a href="<?php echo base_url('hradmin/list-vacancy');?>" class="btn btn-outline bg-danger text-white border-white border-2 cancel"  role="button">Cancel</a>
 										<button type="submit" class="btn btn-outline bg-success text-white border-white border-2"><?php echo $lang_submit; ?> <i class="icon-paperplane ml-2"></i></button>
 									</div>
 								</div>
