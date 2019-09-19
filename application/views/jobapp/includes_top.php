@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/magnific-popup.css" type="text/css" />
 	<!-- Date & Time Picker CSS -->
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/components/datepicker.css" type="text/css" />
+	<!-- Bootstrap File Upload CSS -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/components/bs-filestyle.css" type="text/css" />
 	
 
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/frontend/css/responsive.css" type="text/css" />

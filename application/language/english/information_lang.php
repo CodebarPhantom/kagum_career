@@ -116,7 +116,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     $lang['applicant_profile'] = 'Applicant Profile';
     $lang['education_experience'] = 'Education and Experience';
     $lang['idatt_file'] = 'ID and Attach File';
-    $lang['complete'] = 'Complete';
+    $lang['complete'] = 'Validation';
     $lang['firstname'] = 'Firstname';
     $lang['lastname'] = 'Lastname';
     $lang['birthplace'] = 'Birthplace';
@@ -153,6 +153,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
     $lang['supervisor_name'] = 'Supervisor Name';
     $lang['salary'] = 'Salary';
     $lang['reason_leaving'] = 'Reason of Leaving';
+
+    $lang['reference'] = 'Reference';
+    $lang['reference_name'] = 'Reference Name';
+    $lang['add_reference'] = 'Add More Reference';
+
+    $lang['idcard_number'] = 'ID Card Number';
+    $lang['place_release'] = 'Place and Released';
+    $lang['idcard_valid'] = 'Valid Until';
+    $lang['attach_photo'] = 'Attach Photo';
+    $lang['attach_cv'] = 'Attach CV';
+
+
+
 
 
 

@@ -133,11 +133,11 @@ class Jobapp extends CI_Controller{
       $page_data['lang_degree'] = $this->lang->line('degree');
       $page_data['lang_from'] = $this->lang->line('from');
       $page_data['lang_to'] = $this->lang->line('to');
-      $page_data['lang_add_education'] = $this->lang->line('add_education');
-      $page_data['lang_add_experience'] = $this->lang->line('add_experience');
+      $page_data['lang_add_education'] = $this->lang->line('add_education');      
       $page_data['lang_reset_row'] = $this->lang->line('reset_row'); 
 
       $page_data['lang_experience'] = $this->lang->line('experience');
+      $page_data['lang_add_experience'] = $this->lang->line('add_experience');
       $page_data['lang_company_name'] = $this->lang->line('company_name');
       $page_data['lang_industry'] = $this->lang->line('industry');
       $page_data['lang_position'] = $this->lang->line('position');
@@ -145,11 +145,31 @@ class Jobapp extends CI_Controller{
       $page_data['lang_end_date'] = $this->lang->line('end_date');
       $page_data['lang_supervisor_name'] = $this->lang->line('supervisor_name');
       $page_data['lang_salary'] = $this->lang->line('salary');
-      $page_data['lang_reason_leaving'] = $this->lang->line('reason_living');
-      
+      $page_data['lang_reason_leaving'] = $this->lang->line('reason_leaving');
+
+      $page_data['lang_reference'] = $this->lang->line('reference');
+      $page_data['lang_add_reference'] = $this->lang->line('add_reference');
+      $page_data['lang_reference_name'] = $this->lang->line('reference_name');
+
+      $page_data['lang_idcard_number'] = $this->lang->line('idcard_number');
+      $page_data['lang_place_release'] = $this->lang->line('place_release');
+      $page_data['lang_idcard_valid'] = $this->lang->line('idcard_valid');
+      $page_data['lang_attach_photo'] = $this->lang->line('attach_photo');
+      $page_data['lang_attach_cv'] = $this->lang->line('attach_cv');
+      $page_data['lang_submit'] = $this->lang->line('submit');
+
       $page_data['page_name'] = 'job_apply';
       $page_data['get_job_requirement_data'] = $this->Jobapp_model->getid_vacancy($idcareer);
       $this->load->view('jobapp/index.php', $page_data);
+    }
+
+    function job_apply(){
+      $idcareer = $this->input->post('idcareer');      
+      if(empty($idcareer)) {
+        redirect('jobapp');
+      }else {
+
+      }
     }
   }
 }
